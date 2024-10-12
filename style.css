@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+html , body{
+    height: 100%;
+    width: 100%;
+}
+#page1{
+  min-height: 100vh;
+  width: 100%;
+  background-color: #EFEAE3;
+  position: relative;
+  padding: 0 2vw;
+}
+nav{
+  padding: 2vw 2vw 8vw 2vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#navpart-2{
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+#navpart-2 h4{
+  padding: 10px 20px;
+  border: 1px solid rgba(14, 13, 13, 0.463);
+  border-radius: 50px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.811);
+  position: relative;
+  font-size: 19px;
+  transition: all ease 0.4s;
+  overflow: hidden;
+}
+#navpart-2 h4::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+#navpart-2 h4:hover::after{
+  bottom: 0;
+  border-radius: 0;
+}
+#navpart-2 h4 a{
+  color: #000000bb;
+  text-decoration: none;
+  position: relative;
+  z-index: 9;
+}
+#navpart-2 h4:hover a{
+  color: white;
+}
+
+
+#center{
+  height: 66vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #0000003c;
+  padding-bottom: 4vw;
+}
+#left h3{
+  width: 30vw;
+  font-size: 2vw;
+  line-height: 2vw;
+}
+#center h1{
+  font-size: 10vw;
+  line-height: 8vw;
+  text-align: right;
+}
+#page1 video{
+  position: relative;
+  border-radius: 30px;
+  margin-top: 3.8vw;
+  width: 100%;
+}
+
+#hero-shape{
+  position: absolute;
+  height: 36vw;
+  width: 46vw;
+  right: 0;
+  top: 78%;
+}
+#hero-1{
+  height: 100%;
+  width: 100%;
+  background-color: #FE370D;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(20px);
+  position: absolute;
+}
+#hero-2{
+  height: 30vw;
+  width: 30vw;
+  background: linear-gradient(#FE370D,#fe6b16);
+  border-radius: 50%;
+  filter: blur(25px);
+  position: absolute;
+  animation-name: anime2;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#hero-3{
+  height: 30vw;
+  width: 30vw;
+  background: linear-gradient(#FE370D,#fe6b16);
+  border-radius: 50%;
+  filter: blur(25px);
+  position: absolute;
+  animation-name: anime1;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes anime1 {
+  from{transform: translate(55%, -5%);
+  }
+  to{
+    transform: translate(0%, 10%);
+  }
+}
+@keyframes anime2 {
+  from{transform: translate(5%, -2%);
+  }
+  to{
+    transform: translate(-2%, 30%);
+  }
+}
